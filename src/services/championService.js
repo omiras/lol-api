@@ -5,6 +5,12 @@ const getAllChampions = () => {
     return allChampions;
 }
 
+const getChampionById = (name) => {
+    const champion = Champion.getChampionById(name);
+    return champion;
+}
+
 module.exports = {
-    getAllChampions
+    getAllChampions,
+    getChampionById
 }
