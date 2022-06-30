@@ -1,7 +1,7 @@
 // In src/index.js
 const express = require("express");
-// *** ADD ***
-const v1Router = require("./v1/routes");
+
+const v1ChampionsRouter = require("./v1/routes/championsRoutes");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 // *** ADD ***
-app.use("/api/v1", v1Router);
+app.use("/api/v1/champions", v1ChampionsRouter);
 
 app.listen(PORT, () => {
     console.log(`API is listening on port ${PORT}`);
